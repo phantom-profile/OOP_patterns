@@ -1,0 +1,5 @@
+#first line. Made by arum at 2022-02-18T17:53:26+03:00
+puts 1+1
+puts 2*2
+
+#last line. Made by arum at 2022-02-18T17:53:26+03:00
