@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # basic pen with ink limit
 class Pen
   attr_reader :ink

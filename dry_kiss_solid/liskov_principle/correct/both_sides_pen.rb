@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
-require_relative 'pen'
+require_relative '../pen'
 require_relative 'pen_tester'
 
 # correct. New behaviour added
-class BothSidesPen < Pen
-  def write_reversed(word)
-    raise 'out of ink' if out_of_ink_for? word
+module Correct
+  class BothSidesPen < Pen
+    def write_reversed(word)
+      raise 'out of ink' if out_of_ink_for? word
 
-    self.ink -= word.length
-    word.reverse
+      self.ink -= word.length
+      word.reverse
+    end
   end
 end
 

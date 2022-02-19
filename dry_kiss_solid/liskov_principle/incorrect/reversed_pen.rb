@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'pen'
-require_relative 'pen_tester'
+require_relative '../pen'
+require_relative '../pen_tester'
 
 # incorrect. Different way of acting
-class ReversedPen < Pen
-  def write(word)
-    word = word.reverse
-    super
+module Incorrect
+  class ReversedPen < Pen
+    def write(word)
+      word = word.reverse
+      super
+    end
   end
 end
 
