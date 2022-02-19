@@ -36,11 +36,13 @@ S:
 
 O:
     
-    # incorrect. Method modification.
-    git commit -m "Replaced Pen#write_word to Pen#write_one_or_more_words"
+    # incorrect. Method modification and Method adding
+    git commit -m "Replaced Singer#sing_loud to Singer#sing_silent"
+    git commit -m "Added Singer#sing_english_song and Singer#sing_russian_song"
     
-    # correct. Method adding
-    git commit -m "Added Pen#write_many_words"
+    # correct. Singer can sing new songs without different methods for them
+    git commit -m "added Sing#trascript"
+    git commit -m "Added Singer#sing_song_by_trascription"
 
 L:
 
