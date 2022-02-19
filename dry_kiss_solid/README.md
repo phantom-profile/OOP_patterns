@@ -13,7 +13,7 @@ write code only for your tasks. No need to write in advance.
 
 **SOLID** - bundle of principles for making more reliable simple and easy-supportive code.
 1) **S** - Single-responsibility principle. One structural block is responsible for one task.
-2) **O** - Open–closed principle. Previously written functionality cannot be modified. But can become wider.
+2) **O** - Open–closed principle. Previously written functionality cannot be modified. But can become wider without changing code.
 3) **L** - Liskov substitution principle. Older classes can be replaced with child classes without conflicts.
 4) **I** - Interface segregation principle. Try to separate interfaces logically. Use methods which needed for classes.
 5) **D** - Dependency inversion principle. We have to rely on abstractions but not to realisation.
