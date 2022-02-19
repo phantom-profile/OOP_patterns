@@ -78,8 +78,8 @@ I:
 
     Class Animal
         def eat; end # needed for all animals, ok
-        def walk; end # needed only for walking animals
-        def swim; end # needed only for swimming animals
+        def walk; end # needed only for walking animals, wrong
+        def swim; end # needed only for swimming animals, wrong
     end
 
     # correct. Only needed interfaces for classes
@@ -112,12 +112,12 @@ D:
     class DatePrinting
         # so, if Date constructor will be changed we have to change it twice
 
-        def first_of_march
-            puts Date.new 2022, 3, 1 
+        def first_of_march(year = Date.today.year)
+            puts Date.new year, 3, 1 
         end
 
-        def first_of_june
-            puts Date.new 2022, 6, 1
+        def first_of_june(year = Date.today.year)
+            puts Date.new year, 6, 1
         end
     end
 
@@ -132,11 +132,11 @@ D:
     class DatePrinting
         # no changes here
 
-        def first_of_march(year)
+        def first_of_march(year = Date.today.year)
             puts DateAdapter.date_in_format day: 1, month: 3, year: year
         end
 
-        def first_of_june(year)
+        def first_of_june(year = Date.today.year)
             puts DateAdapter.date_in_format day: 1, month: 6, year: year
         end
     end
