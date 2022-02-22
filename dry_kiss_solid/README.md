@@ -139,10 +139,10 @@ D:
         end
 
         def first_of_march(year = Date.today.year)
-            puts date_formater.date_in_format day: 1, month: 3, year: year
+            puts @date_formater.date_in_format day: 1, month: 3, year: year
         end
 
         def first_of_june(year = Date.today.year)
-            puts date_formater.date_in_format day: 1, month: 6, year: year
+            puts @date_formater.date_in_format day: 1, month: 6, year: year
         end
     end
