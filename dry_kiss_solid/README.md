@@ -112,7 +112,7 @@ D:
     # incorrect. We use method hoping it is not be changed.
 
     class DatePrinting
-        # so, if Date constructor will be changed we have to change it twice
+        # so, here we use class Date and we have strong dependency
 
         def first_of_march(year = Date.today.year)
             puts Date.new year, 3, 1 
@@ -126,19 +126,23 @@ D:
     # correct. Abstract layer for dates, so we need change only in one place.
 
     class DateAdapter
-        def self.date_in_format(day:, month:, year:)
+        def date_in_format(day:, month:, year:)
             Date.new year, month, day
         end
     end
 
     class DatePrinting
-        # no changes here
+        # so, here we use abstract date_formater and we have weak dependency, only interface
+
+        def initialize(date_formater)
+            @date_formater = date_formater
+        end
 
         def first_of_march(year = Date.today.year)
-            puts DateAdapter.date_in_format day: 1, month: 3, year: year
+            puts date_formater.date_in_format day: 1, month: 3, year: year
         end
 
         def first_of_june(year = Date.today.year)
-            puts DateAdapter.date_in_format day: 1, month: 6, year: year
+            puts date_formater.date_in_format day: 1, month: 6, year: year
         end
     end
