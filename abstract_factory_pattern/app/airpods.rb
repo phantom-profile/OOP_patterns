@@ -12,6 +12,11 @@ class Airpods < Headphones
     @brand = 'Apple'
   end
 
+  def play_for_hour
+    super
+    puts 'We do not look like rotten peanuts'
+  end
+
   protected
 
   def impossible_to_connect!

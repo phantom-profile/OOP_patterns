@@ -12,6 +12,11 @@ class Earbuds < Headphones
     @brand = 'Samsung'
   end
 
+  def play_for_hour
+    super
+    puts 'there is no need to sell kidney to buy me'
+  end
+
   protected
 
   def impossible_to_connect!
