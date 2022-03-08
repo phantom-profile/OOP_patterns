@@ -10,14 +10,11 @@ class Galaxy < Smartphone
     @brand = 'Samsung'
   end
 
-  def use_for_hour
-    super
-    puts 'there is no need to sell another kidney to buy me'
-  end
-
   protected
 
-  attr_reader :brand
+  def display
+    'There is no need to sell kidney to buy me'
+  end
 
   def connection_possible_to?(headphones)
     super && headphones.brand == brand

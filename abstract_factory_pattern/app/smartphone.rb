@@ -3,6 +3,8 @@
 class Smartphone
   BATTERY_SPENT_EACH_HOUR = 500
 
+  attr_reader :brand
+
   def initialize(battery_mah, unique_name)
     @name = unique_name
     @battery_mah = battery_mah
@@ -13,6 +15,7 @@ class Smartphone
 
     self.battery_mah -= BATTERY_SPENT_EACH_HOUR
     puts name_yourself
+    puts display
     @connected_to&.play_for_hour
   end
 
@@ -27,6 +30,10 @@ class Smartphone
 
   def power_off!
     raise 'no battery, please recharge phone'
+  end
+
+  def display
+    'bum-bum-bum'
   end
 
   def connection_possible_to?(headphones)

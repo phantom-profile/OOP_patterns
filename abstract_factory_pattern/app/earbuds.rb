@@ -10,14 +10,11 @@ class Earbuds < Headphones
     @brand = 'Samsung'
   end
 
-  def play_for_hour
-    super
-    puts 'there is no need to sell kidney to buy me'
-  end
-
   protected
 
-  attr_reader :brand
+  def sound
+    '... and there is no need to sell another kidney to buy us'
+  end
 
   def impossible_to_connect!
     raise "cannot establish connection, phone is not #{brand} brand"

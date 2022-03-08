@@ -3,6 +3,8 @@
 class Headphones
   BATTERY_SPENT_EACH_HOUR = 200
 
+  attr_reader :brand
+
   def initialize(any_noise_canceling, battery_mah, unique_name)
     @noise_canceling = any_noise_canceling
     @name = unique_name
@@ -14,6 +16,7 @@ class Headphones
 
     self.battery_mah -= BATTERY_SPENT_EACH_HOUR
     puts name_yourself
+    puts sound
   end
 
   def connect_to(phone)
@@ -28,6 +31,10 @@ class Headphones
 
   def power_off!
     raise 'no battery, please recharge headset'
+  end
+
+  def sound
+    'blah-blah-blah'
   end
 
   def connection_possible_to?(phone)

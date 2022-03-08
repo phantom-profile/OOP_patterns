@@ -10,14 +10,11 @@ class Iphone < Smartphone
     @brand = 'Apple'
   end
 
-  def use_for_hour
-    super
-    puts '..and i do not explode in your hands'
-  end
-
   protected
 
-  attr_reader :brand
+  def display
+    'I do not explode in your hands'
+  end
 
   def connection_possible_to?(headphones)
     super && headphones.brand == brand

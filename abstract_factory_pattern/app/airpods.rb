@@ -10,14 +10,11 @@ class Airpods < Headphones
     @brand = 'Apple'
   end
 
-  def play_for_hour
-    super
-    puts 'We do not look like rotten peanuts'
-  end
-
   protected
 
-  attr_reader :brand
+  def sound
+    '... and we do not look like rotten peanuts'
+  end
 
   def impossible_to_connect!
     raise "cannot establish connection, phone is not #{brand} brand"
