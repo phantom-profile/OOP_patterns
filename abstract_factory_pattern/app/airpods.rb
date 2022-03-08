@@ -5,8 +5,6 @@ require_relative 'headphones'
 class Airpods < Headphones
   BATTERY_SPENT_EACH_HOUR = 250
 
-  attr_accessor :brand
-
   def initialize(any_noise_canceling, battery_mah, unique_name)
     super(any_noise_canceling, battery_mah, unique_name)
     @brand = 'Apple'
@@ -18,6 +16,8 @@ class Airpods < Headphones
   end
 
   protected
+
+  attr_reader :brand
 
   def impossible_to_connect!
     raise "cannot establish connection, phone is not #{brand} brand"

@@ -5,8 +5,6 @@ require_relative 'smartphone'
 class Galaxy < Smartphone
   BATTERY_SPENT_EACH_HOUR = 400
 
-  attr_accessor :battery_mah, :brand
-
   def initialize(battery_mah, unique_name)
     super(battery_mah, unique_name)
     @brand = 'Samsung'
@@ -18,6 +16,8 @@ class Galaxy < Smartphone
   end
 
   protected
+
+  attr_reader :brand
 
   def connection_possible_to?(headphones)
     super && headphones.brand == brand

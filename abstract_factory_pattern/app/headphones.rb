@@ -3,8 +3,6 @@
 class Headphones
   BATTERY_SPENT_EACH_HOUR = 200
 
-  attr_accessor :battery_mah
-
   def initialize(any_noise_canceling, battery_mah, unique_name)
     @noise_canceling = any_noise_canceling
     @name = unique_name
@@ -15,10 +13,7 @@ class Headphones
     power_off! if battery_mah < BATTERY_SPENT_EACH_HOUR
 
     self.battery_mah -= BATTERY_SPENT_EACH_HOUR
-  end
-
-  def power_off!
-    raise 'no battery, please recharge headset'
+    puts name_yourself
   end
 
   def connect_to(phone)
@@ -29,11 +24,21 @@ class Headphones
 
   protected
 
+  attr_accessor :battery_mah
+
+  def power_off!
+    raise 'no battery, please recharge headset'
+  end
+
   def connection_possible_to?(phone)
     !phone.nil?
   end
 
   def impossible_to_connect!
     raise 'cannot establish connection to phone'
+  end
+
+  def name_yourself
+    "#{self.class}: #{@name}"
   end
 end
