@@ -2,14 +2,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    date (3.1.0)
     diff-lcs (1.5.0)
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
     rainbow (3.1.1)
     regexp_parser (2.2.0)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -41,7 +40,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  date
   rspec
   rubocop
 
