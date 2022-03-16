@@ -2,27 +2,23 @@
 
 ### Problem
 
-There is a country with bunch of cities with government, which has two tasks: collect taxes and spend them on new buildings. There are
-many inattentive people in government so it is important to make safe system of control for money flow. 
-In other words if there is a chance of miss understanding who has to spend money and who has to collect them - 
-be pretty sure that it will happen.
+There is a database and application for reading and writing about animals which needs permanent access to DB. 
+Each connection to DB is very expensive operation if we talk about time. 
+That is why connection should be established only once. 
 
 ### Solution
 
-make single access point to government system, so if government is called we can exactly say thai it is THAT people who 
-manage city.
+make single access point to DB, so it is going to be established for the first time and
+after that every new call of DB is going to return same BD connection.
 
 ### Program setup
 
-1) Class Country (has many cities)
-2) Class City (has many buildings)
-3) Class Building
-4) Class Government (has one budget)
-5) Class Budget (cannot be separated from Government)
+1) Class Client
+2) Class RedServer
 
 ### Program solution
 
-Make Class Government a singleton, so we can call Government.instance and get only one exact government.
-It causes only one budget and no loss of info/money in country.
+Make Class RedServer a singleton, so we can call RedServer.connection and get only one exact connection.
+It causes only one database and no time resources wasted.
 
 _**It is way of realising [Singleton](https://refactoring.guru/ru/design-patterns/singleton) pattern in OOP.**_
