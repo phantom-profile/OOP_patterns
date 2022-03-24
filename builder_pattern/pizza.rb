@@ -25,6 +25,7 @@ On platform #{platform}
 With sauce #{sauce}
 With ingredients:
     #{ingredients.inject('') { |str, ingredient| "#{str}#{ingredient.tastes}\n\t" }}Bake time: #{bake_time}
+STATUS: #{status}
 ----------------------------------"
   end
 end
