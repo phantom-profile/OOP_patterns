@@ -9,7 +9,7 @@ module Correct
     end
 
     def square
-      Math::PI * radius**2
+      Math::PI * (radius**2)
     end
 
     def shape

@@ -2,7 +2,6 @@
 
 # singleton
 class RedServer
-
   private_class_method :new
 
   def self.connection

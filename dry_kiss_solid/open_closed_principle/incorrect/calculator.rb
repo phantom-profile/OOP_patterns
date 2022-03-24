@@ -8,7 +8,7 @@ module Incorrect
       figures.each do |figure|
         case figure.shape
         when 'Circle'
-          sum += Math::PI * figure.radius**2
+          sum += Math::PI * (figure.radius**2)
         when 'Square'
           sum += figure.side**2
         else
