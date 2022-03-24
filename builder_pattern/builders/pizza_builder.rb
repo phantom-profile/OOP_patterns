@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative '../pizza'
-require_relative '../ingredient'
+require_relative '../app/pizza'
+require_relative '../app/ingredient'
 
 class PizzaBuilder
   SIZE = {

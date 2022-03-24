@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'builders/pizza_director'
-require_relative 'builders/pepperoni_builder'
-require_relative 'builders/ham_mushroom_builder'
+require_relative '../builders/pizza_director'
+require_relative '../builders/pepperoni_builder'
+require_relative '../builders/ham_mushroom_builder'
 
 class PizzaShop
   def initialize
