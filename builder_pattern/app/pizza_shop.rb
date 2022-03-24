@@ -16,6 +16,8 @@ class PizzaShop
       @director.builder = PepperoniBuilder.new
     when 'ham and mushrooms'
       @director.builder = HamMushroomBuilder.new
+    else
+      raise 'No such pizza available'
     end
     @director.bake_pizza size
   end
