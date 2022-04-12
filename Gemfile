@@ -9,3 +9,4 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem 'duplicate'
 gem 'rspec'
 gem 'rubocop'
+gem 'awesome_print'
