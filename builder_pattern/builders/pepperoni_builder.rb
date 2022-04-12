@@ -3,16 +3,7 @@
 require_relative 'pizza_builder'
 
 class PepperoniBuilder < PizzaBuilder
-  def initialize
-    super
-    @pizza = Pizza.new('Pepperoni')
-  end
-
-  def reset_product
-    product = @pizza
-    @pizza = Pizza.new('Pepperoni')
-    product
-  end
+  NAME = 'Pepperoni'
 
   def set_sauce
     @pizza.sauce = Ingredient.new('ketchup', 200 * @size)

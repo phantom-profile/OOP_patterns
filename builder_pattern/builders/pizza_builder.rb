@@ -11,10 +11,20 @@ class PizzaBuilder
     monster: [2, 20]
   }.freeze
 
+  NAME = 'pizza'
+
   attr_accessor :pizza
 
+  def initialize
+    @pizza = Pizza.new(self.class::NAME)
+  end
+
   # @return [Pizza]
-  def reset_product; end
+  def reset_product
+    product = @pizza
+    @pizza = Pizza.new(NAME)
+    product
+  end
 
   # @param [String] size_name
   # @return [NilClass]
