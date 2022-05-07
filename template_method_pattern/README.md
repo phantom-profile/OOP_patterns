@@ -24,4 +24,4 @@ but many objects which will realise algorithm in their own way
 2) Class RedisApiLogSmsRegistration < UserRegistration
 3) Class SqlOwnLogEmailRegistration < UserRegistration
 
-_**It is way of realising [Template method](https://refactoring.guru/ru/design-patterns/template_method) pattern in OOP.**_
+_**It is way of realising [Template method](https://refactoring.guru/ru/design-patterns/template-method) pattern in OOP.**_
